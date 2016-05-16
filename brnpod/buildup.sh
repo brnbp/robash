@@ -73,7 +73,7 @@ if [[ ! -d api ]];
 fi
 
 # create cronjob
-#* * * * * php ~/Code/podcast-env/podcast-api/artisan schedule:run >> /dev/null 2>&1
+#* * * * * php ~/Code/api/artisan schedule:run >> /dev/null 2>&1
 printf 'serving application.. \n'
 php artisan serve --port 8081 --quiet &
 
