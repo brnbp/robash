@@ -22,7 +22,6 @@ if [[ ! -d warehouse ]];
     cp .env.example .env
     php artisan key:generate
 
-
   else
     cd warehouse 
     printf 'updating project, this can take a while ☕ \n'
@@ -72,8 +71,6 @@ if [[ ! -d api ]];
     ./composer.phar update --quiet
 fi
 
-# create cronjob
-#* * * * * php ~/Code/api/artisan schedule:run >> /dev/null 2>&1
 printf 'serving application.. \n'
 php artisan serve --port 8081 --quiet &
 
